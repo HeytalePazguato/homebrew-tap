@@ -5,21 +5,21 @@
 class CronDoctor < Formula
   desc "Audit your crontabs"
   homepage "https://github.com/HeytalePazguato/cron-doctor"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/HeytalePazguato/cron-doctor/releases/download/v0.0.1/cron-doctor_darwin_amd64.tar.gz"
-      sha256 "3f50fcc3b3ffd6c4f5312bee4ab1e03f7aa6246ee58e685c793f2849db91e2e9"
+      url "https://github.com/HeytalePazguato/cron-doctor/releases/download/v0.0.2/cron-doctor_darwin_amd64.tar.gz"
+      sha256 "57ffadade48f7f1d4a3d451f93ca5caf4520529a30fb48b799f6734d11fff79f"
 
       define_method(:install) do
         bin.install "cron-doctor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/HeytalePazguato/cron-doctor/releases/download/v0.0.1/cron-doctor_darwin_arm64.tar.gz"
-      sha256 "eef1c09bc556827a25c0dd473c7e6a1906b5ba9b792e434e1c33c8bd477b01c2"
+      url "https://github.com/HeytalePazguato/cron-doctor/releases/download/v0.0.2/cron-doctor_darwin_arm64.tar.gz"
+      sha256 "c57743fc8172d1cf76de019dfb784d5b545c9f5123af58561016732121b19914"
 
       define_method(:install) do
         bin.install "cron-doctor"
@@ -29,15 +29,15 @@ class CronDoctor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HeytalePazguato/cron-doctor/releases/download/v0.0.1/cron-doctor_linux_amd64.tar.gz"
-      sha256 "693577149ba1548ac3eac0a5e54ef7e7783564c95d40b4aac2f7b5fab899809a"
+      url "https://github.com/HeytalePazguato/cron-doctor/releases/download/v0.0.2/cron-doctor_linux_amd64.tar.gz"
+      sha256 "63a24cea138b4ef9c7180dc57ee763cd4bad48658ed3b7dfc2979cc29466c627"
       define_method(:install) do
         bin.install "cron-doctor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HeytalePazguato/cron-doctor/releases/download/v0.0.1/cron-doctor_linux_arm64.tar.gz"
-      sha256 "5a21074e2f365a3af5778c5b485283feb9222410e1a86541ed26b230225097e1"
+      url "https://github.com/HeytalePazguato/cron-doctor/releases/download/v0.0.2/cron-doctor_linux_arm64.tar.gz"
+      sha256 "747381fb82ea7e838dc3e67577a8e6481b88afaf1810e332edf713609b3610be"
       define_method(:install) do
         bin.install "cron-doctor"
       end
