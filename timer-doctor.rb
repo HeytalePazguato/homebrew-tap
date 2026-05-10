@@ -5,21 +5,21 @@
 class TimerDoctor < Formula
   desc "Audit your systemd timers"
   homepage "https://github.com/HeytalePazguato/timer-doctor"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/HeytalePazguato/timer-doctor/releases/download/v0.0.1/timer-doctor_darwin_amd64.tar.gz"
-      sha256 "67f5b050ff3569746a67a21bd27fe234c36bffb46f4d2682cc1db4b836568c78"
+      url "https://github.com/HeytalePazguato/timer-doctor/releases/download/v0.0.2/timer-doctor_darwin_amd64.tar.gz"
+      sha256 "d31167811824670cc72b7b09d5d3057df5e3dccf7f5521483e048315d2ed0839"
 
       define_method(:install) do
         bin.install "timer-doctor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/HeytalePazguato/timer-doctor/releases/download/v0.0.1/timer-doctor_darwin_arm64.tar.gz"
-      sha256 "09c2e6bfd1e5600a7ab6502b7c1798daa4406719b93dfae6afc46a564e09febf"
+      url "https://github.com/HeytalePazguato/timer-doctor/releases/download/v0.0.2/timer-doctor_darwin_arm64.tar.gz"
+      sha256 "648705500b79b72013c90ffdeabbc657f149ea5646a53b352b178b004459717f"
 
       define_method(:install) do
         bin.install "timer-doctor"
@@ -29,15 +29,15 @@ class TimerDoctor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HeytalePazguato/timer-doctor/releases/download/v0.0.1/timer-doctor_linux_amd64.tar.gz"
-      sha256 "954f094071a04522f78e3b6264f4cdf0334835238e3a7dc006b49cbb575fcead"
+      url "https://github.com/HeytalePazguato/timer-doctor/releases/download/v0.0.2/timer-doctor_linux_amd64.tar.gz"
+      sha256 "8fc7bd181cb281f3d13ef54bfd9cf4469e9f746a30f14d71f933202b4ff6a01d"
       define_method(:install) do
         bin.install "timer-doctor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HeytalePazguato/timer-doctor/releases/download/v0.0.1/timer-doctor_linux_arm64.tar.gz"
-      sha256 "90331f24475d29b18f26ad2bdf83a286dc87c9af6dcf1c952344b6816f5aa588"
+      url "https://github.com/HeytalePazguato/timer-doctor/releases/download/v0.0.2/timer-doctor_linux_arm64.tar.gz"
+      sha256 "199f88b1376c3399be87d67bfbfda10f5a5f3bcee4190bb21ca714080a39a210"
       define_method(:install) do
         bin.install "timer-doctor"
       end
